@@ -1,0 +1,586 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0A0A14;
+    --bg-card: #1A1A2E;
+    --text-white: #FFFFFF;
+    --text-gray: #B0B0B0;
+    --accent-gold: #FFD700;
+    --accent-gold-dark: #D4AF37;
+    --number-gray: #6B6B6B;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #0F0F1F 100%);
+}
+
+.premium-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--text-white);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.premium-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.hero-brand {
+    margin-bottom: 20px;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.brand-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-top: -10px;
+    line-height: 1;
+}
+
+.hero-tagline {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-white);
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-white);
+    letter-spacing: 1px;
+}
+
+/* Partnership Section */
+.partnership {
+    padding: 80px 20px;
+    background-color: var(--bg-dark);
+}
+
+.partnership-box {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.premium-label {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.partnership-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.payment-info {
+    background-color: rgba(26, 26, 46, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.payment-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.payment-info p {
+    color: var(--text-white);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 20px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* How We Work Section */
+.how-we-work {
+    background-color: var(--bg-dark);
+}
+
+.description-block {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.description-block p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-white);
+}
+
+.example-block {
+    background-color: var(--bg-card);
+    border: 1px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.example-header {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.example-steps {
+    margin-bottom: 25px;
+}
+
+.example-steps p {
+    font-size: 18px;
+    color: var(--text-white);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.highlight {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+.example-conclusion {
+    font-size: 16px;
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+/* Why Profitable Section */
+.why-profitable {
+    background-color: var(--bg-dark);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 50px 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.feature-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--bg-dark);
+    margin: 0 auto 25px;
+}
+
+.feature-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+/* Guarantees Section */
+.guarantees {
+    background-color: var(--bg-dark);
+}
+
+.guarantees-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.guarantee-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 40px 30px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.guarantee-card:hover {
+    transform: translateY(-5px);
+}
+
+.guarantee-number {
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--number-gray);
+    opacity: 0.3;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    line-height: 1;
+}
+
+.guarantee-card p {
+    font-size: 18px;
+    color: var(--text-white);
+    line-height: 1.6;
+    margin-top: 60px;
+}
+
+/* Payment Conditions Section */
+.payment-conditions {
+    background-color: var(--bg-dark);
+}
+
+.payment-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.payment-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+}
+
+.payment-card-header {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.payment-card-value {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.payment-card-description {
+    font-size: 16px;
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--bg-dark);
+    padding: 100px 20px;
+}
+
+.contact-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.highlight-banks {
+    color: var(--accent-gold);
+}
+
+.contact-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-button {
+    background-color: var(--bg-card);
+    border: 1px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 30px 40px;
+    text-decoration: none;
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.contact-button:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-dark);
+}
+
+.contact-button span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-dark);
+    padding: 60px 20px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.footer-brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+}
+
+.footer-slogan {
+    font-size: 16px;
+    color: var(--text-white);
+    margin-bottom: 20px;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .brand-name,
+    .brand-subtitle {
+        font-size: 48px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .stats-grid,
+    .features-grid,
+    .guarantees-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .payment-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .brand-name,
+    .brand-subtitle {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .partnership-box,
+    .description-block,
+    .example-block {
+        padding: 25px;
+    }
+    
+    .contact-title {
+        font-size: 24px;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .contact-button {
+        width: 100%;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-brand,
+.stats-grid,
+.feature-card,
+.guarantee-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+
+
