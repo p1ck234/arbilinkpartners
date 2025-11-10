@@ -2,8 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Intersection Observer for fade-in animations
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -100px 0px'
     };
 
     const observer = new IntersectionObserver(function(entries) {
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     animatedElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        el.style.transform = 'translateY(15px)';
+        el.style.transition = 'opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
         observer.observe(el);
     });
 
@@ -59,8 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (hero && scrollTop < window.innerHeight) {
-            const parallaxValue = scrollTop * 0.5;
+            const parallaxValue = scrollTop * 0.2;
             hero.style.transform = `translateY(${parallaxValue}px)`;
+            hero.style.transition = 'transform 0.1s ease-out';
         }
         
         lastScrollTop = scrollTop;
@@ -128,9 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
